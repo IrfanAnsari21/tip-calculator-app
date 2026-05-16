@@ -1,0 +1,159 @@
+:root {
+    --Green-400: hsl(172, 67%, 45%);
+    --Green-900: hsl(183, 100%, 15%);
+    --Grey-500: hsl(186, 14%, 43%);
+    --Grey-400: hsl(184, 14%, 56%);
+    --Grey-200: hsl(185, 41%, 84%);
+    --Grey-50: hsl(189, 47%, 97%);
+    --White: hsl(0, 100%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Mobile-first ---------- */
+body {
+    min-height: 100vh;
+    background-color: var(--Grey-200);
+    font-family: 'Space Mono', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .logo {
+    margin: 2rem auto;
+}
+
+#calculator {
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.text {
+    text-align: start;
+    color: var(--Grey-500);
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.dollar-svg, .person-svg {
+    width: 12px;
+    position: absolute;
+    top: 57%;
+    left: 1.5rem;
+}
+
+.bill input, .number-of-people input {
+    max-width: 100%;
+    border: none;
+    background-color: var(--Grey-50);
+    color: var(--Green-900);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: end;
+}
+
+.tip-selection {
+    margin-bottom: 2rem;
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.tip-btn {
+    width: 100%;
+    border: none;
+    background-color: var(--Green-900);
+    color: var(--Grey-50);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tip-btn:hover {
+    background-color: var(--Green-400);
+    color: var(--Green-900);
+}
+
+#custom-tip-btn {
+    background-color: var(--Grey-50);
+    text-align: center;
+    color: var(--Green-900);
+}
+
+.number-of-people {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.calculation-box {
+    max-width: 100%;
+    background-color: var(--Green-900);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.tip-amount, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.tip-amount .text, .total .text {
+    color: var(--Grey-50);
+
+    & span {
+        color: var(--Grey-400);
+        font-size: 14px;
+    }
+}
+
+.tip-amount .amount, .total .amount {
+    color: var(--Green-400);
+    font-size: 28px;
+}
+
+.reset-btn {
+    width: 100%;
+    border: none;
+    background-color: var(--Green-400);
+    color: var(--Green-900);
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: hsl(172, 70%, 69%);
+}

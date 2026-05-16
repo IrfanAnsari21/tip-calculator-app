@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-  <main>
+  <main class="container">
     <header>
       <img class="logo" src="images/logo.svg" alt="">
     </header>
     <div id="calculator">
       <div class="bill-details">
         <section class="bill">
-          <label class="bill-text">Bill</label>
+          <label class="text">Bill</label>
           <img class="dollar-svg" src="images/icon-dollar.svg" alt="">
           <input type="number" name="bill" min="0" placeholder="0" id="bill-amount">
         </section>
-        <section class="tip">
-          <p class="tip-text">Select Tip %</p>
+        <section class="tip-selection">
+          <p class="text">Select Tip %</p>
           <div class="tip-buttons">
             <button class="tip-btn">5%</button>
             <button class="tip-btn">10%</button>
@@ -32,7 +38,7 @@
           </div>
         </section>
         <section class="number-of-people">
-          <label class="number-of-people-text">Number of People</label>
+          <label class="text">Number of People</label>
           <img class="person-svg" src="images/icon-person.svg" alt="">
           <input type="number" name="number-of-people" min="0" placeholder="0" id="number-of-people">
         </section>
@@ -52,4 +58,5 @@
   </main>
 
 </body>
+
 </html>
