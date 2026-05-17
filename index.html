@@ -29,16 +29,16 @@
         <section class="tip-selection">
           <p class="text">Select Tip %</p>
           <div class="tip-buttons">
-            <button class="tip-btn">5%</button>
-            <button class="tip-btn">10%</button>
-            <button class="tip-btn">15%</button>
-            <button class="tip-btn">25%</button>
-            <button class="tip-btn">50%</button>
+            <button class="tip-btn" value="5">5%</button>
+            <button class="tip-btn" value="10">10%</button>
+            <button class="tip-btn" value="15">15%</button>
+            <button class="tip-btn" value="25">25%</button>
+            <button class="tip-btn" value="50">50%</button>
             <input class="tip-btn" type="number" name="custom" min="0" placeholder="Custom" id="custom-tip-btn">
           </div>
         </section>
         <section class="number-of-people">
-          <label class="text">Number of People</label>
+          <label class="text">Number of People <span class="error-msg">Can't be zero</span></label>
           <img class="person-svg" src="images/icon-person.svg" alt="">
           <input type="number" name="number-of-people" min="0" placeholder="0" id="number-of-people">
         </section>
@@ -47,18 +47,18 @@
         <div>
           <section class="tip-amount">
             <p class="text">Tip Amount <br><span>/ person</span></p>
-            <p class="amount">$0.00</p>
+            <p class="amount" id="tip-per-person">$0.00</p>
           </section>
           <section class="total">
             <p class="text">Total <br><span>/ person</span></p>
-            <p class="amount">$0.00</p>
+            <p class="amount" id="total-per-person">$0.00</p>
           </section>
         </div>
-        <button class="reset-btn" type="reset">RESET</button>
+        <button class="reset-btn" type="reset" disabled>RESET</button>
       </div>
     </div>
   </main>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

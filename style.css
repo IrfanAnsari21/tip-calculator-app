@@ -78,6 +78,16 @@ header .logo {
     text-align: end;
 }
 
+.bill input:focus,
+.number-of-people input:focus {
+    outline: 2px solid var(--Green-400);
+}
+
+.bill input.error,
+.number-of-people input.error {
+    outline: 2px solid #E17052;
+}
+
 .tip-selection {
     margin-bottom: 2rem;
 }
@@ -106,6 +116,11 @@ header .logo {
     transition: all 0.3s ease;
 }
 
+.tip-btn.selected {
+    background-color: hsl(172, 70%, 69%);
+    color: var(--Green-900);
+}
+
 #custom-tip-btn {
     background-color: var(--Grey-50);
     text-align: center;
@@ -116,6 +131,16 @@ header .logo {
     display: flex;
     flex-direction: column;
     position: relative;
+
+    & .text {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.error-msg {
+    color: #E17052;
+    visibility: hidden;
 }
 
 .calculation-box {
@@ -168,6 +193,11 @@ header .logo {
 .reset-btn:hover {
     background-color: hsl(172, 70%, 69%);
     transition: all 0.3s ease;
+}
+
+.reset-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 
