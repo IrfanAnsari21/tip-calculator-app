@@ -1,6 +1,6 @@
 const bill = document.getElementById('bill-amount');
 const people = document.getElementById('number-of-people');
-const tipBtn = document.querySelectorAll('.tip-btn');
+const tipBtn = document.querySelectorAll('.tip-btn2');
 const customBtn = document.getElementById('custom-tip-btn');
 const tipAmount = document.getElementById('tip-per-person');
 const totalAmount = document.getElementById('total-per-person');
@@ -66,6 +66,12 @@ tipBtn.forEach(btn => {
 
 customBtn.addEventListener('input', () => {
     tipPercentage = customBtn.value / 100;
+
+    customBtn.addEventListener('click', () => {
+        tipBtn.forEach(btn => btn.classList.remove('selected'));
+        tipPercentage = customBtn.value / 100;
+        calculateResult();
+    });
     calculateResult();
 });
 
@@ -85,4 +91,5 @@ function resetResult() {
 resetBtn.addEventListener('click', () => {
     resetInput();
     resetResult();
+    resetBtn.disabled = true;
 })

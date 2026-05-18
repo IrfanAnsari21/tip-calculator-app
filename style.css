@@ -127,6 +127,10 @@ header .logo {
     color: var(--Green-900);
 }
 
+#custom-tip-btn:focus {
+    outline: 2px solid var(--Green-400);
+}
+
 .number-of-people {
     display: flex;
     flex-direction: column;
